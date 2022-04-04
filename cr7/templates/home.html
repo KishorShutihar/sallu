@@ -1,0 +1,12 @@
+{% extends "base.html"%}
+{% block content %}
+    {% for actor in actors %}
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{actor.image.url}}">
+        <div class="card-body">
+            <h5 class="{{actor.name}}">Actor name: {{actor.name}}</h5>
+        <p class="{{actor.description}}">Description: {{actor.description}}</p>
+        </div>
+    </div>
+    {% endfor %}
+{% endblock %}
